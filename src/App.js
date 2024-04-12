@@ -30,7 +30,7 @@
 
    const AppLayout = () => (
    <div className='app'>
-        <Header/>git
+        <Header/>
         <Outlet/>  {/** outlet component from router-dom acccess then children compoemnet and replaces with the path that we call */}
    </div>);
    
