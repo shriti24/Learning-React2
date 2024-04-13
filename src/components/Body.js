@@ -30,16 +30,18 @@ const Body =()=>{
     }
     return (
         <div className='body'>
-            <div className='search'>
+            <div className='search m-4 p-4'>
                 <div className='search'> 
-                    <input type='text' className='input-box' value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
+                    <input type='text' className='input-box border border-solid border-black' value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
                      <button onClick={()=>{
                             const filterList= restaurant_List.filter( res =>  res.info.name.includes(searchText));
                                     console.log(filterList);
                             setFilteredList(filterList);
                            
                         }
-                    }>Search</button>
+                    } 
+                        className=" m-4 px-4 my-2 border-solid bg-green-500" 
+                    >Search</button>
                  </div>
                 {/* <Search  value={searchText}/> */}
                 </div>

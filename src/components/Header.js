@@ -14,13 +14,13 @@ const Header =() => {
                 <img className='w-56'  src={LOGO_URL} />
             </div>
             <div className='nav-items'>  
-                    <ul>
-                        <li>Online Status:{onlineStatus ? '✅' : '🛑'}</li>
-                        <li>Home</li>
-                        <li><Link to='/about'>About Us</Link></li>{/** anchor tag ll refresh entire page. */}
-                        <li><Link to="/contact">ContactUs</Link></li> {/** Link tag ll not refresh entire page rather changing components. */}
-                        <li>Cart</li>
-                        <li><Link to="/instamart">Instamart</Link></li>
+                    <ul className='flex justify-between p-4'>
+                        <li className='px-4'>Online Status:{onlineStatus ? '✅' : '🛑'}</li>
+                        <li className='px-4'>Home</li>
+                        <li className='px-4'><Link to='/about'>About Us</Link></li>{/** anchor tag ll refresh entire page. */}
+                        <li className='px-4'><Link to="/contact">ContactUs</Link></li> {/** Link tag ll not refresh entire page rather changing components. */}
+                        <li className='px-4'>Cart</li>
+                        <li className='px-4'><Link to="/instamart">Instamart</Link></li>
                         <li>
                     <button onClick={()=>{login=== 'Login'?setLogin('Logout'):setLogin('Login')}}>{login}</button>
                         </li>
