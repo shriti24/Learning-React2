@@ -56,3 +56,16 @@ connect store to app
 create Cart Slice store.
 Dispatch Action
 read data using selector.
+
+# types of testing
+integration testing
+end-end 
+unit
+
+# Setting up testing
+    RTL install
+    install jest
+    install babel dependency
+    Configure Babel 
+    Configure parcel config file to disable default Babel tranpilation
+    https://parceljs.org/languages/javascript/#babel - useage with other tools.
