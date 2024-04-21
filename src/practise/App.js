@@ -57,3 +57,24 @@
     const root= ReactDOM.createRoot(document.getElementById("root"));
     root.render(<HeadingComponent/>);
 
+const cartSlice = createSlice({
+    name:'cart',
+    initialState : {
+        items:[]
+    },
+    reducers:{
+        addItem: (state, action)=>{
+            state.items.push(action.payload);
+        },
+        removeItem:(state, action )=>{
+            const removeIdx = state.items.indexOf(action.payload);
+            state.items.slice(removeIdx,1)
+        },
+        clearItems:(state)=>{
+            state.items =[]
+        }
+    }
+})
+export const {addItem, clearItems ,removeItem} =cartSlice.action;
+
+export default cartSlice.reducer;

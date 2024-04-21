@@ -44,3 +44,15 @@ constructor -> render -> compnentDidMount
 # Code splitting 
 lazy-> suspense
                     element:<Suspense fallback ={<h1>Loading....</h1>}>  <Instamart/></Suspense>
+
+# 2 types of routing
+1. Client side routing
+2. Server side routing
+
+# Redux Toolkit
+Install @reduxjs/toolkit and react-redux
+build our Store
+connect store to app
+create Cart Slice store.
+Dispatch Action
+read data using selector.

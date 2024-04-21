@@ -1,4 +1,4 @@
-   import React ,{lazy, Suspense}from 'react';
+   import React ,{lazy, Suspense, useEffect, useState}from 'react';
    import ReactDOM from 'react-dom/client';
    import Header from './components/Header';
    import Body from './components/Body';
@@ -7,8 +7,13 @@
    import Error from './components/Error';
    import ContactUs from './components/ContactUs';
    import RestaurantMenu from './components/RestaurantMenu';
-
+   import UserContext from './utils/UserContext';
+   import { Provider } from 'react-redux';
+   import appStore from './utils/appStore';
+   import Cart from './components/Cart';
+   
    /**
+    * 
     * Header - 
     *   Logo , 
     *   nav item, 
@@ -28,11 +33,30 @@
 
  const Instamart = lazy(()=> import("./components/Instamart"));
 
-   const AppLayout = () => (
-   <div className='app'>
-        <Header/>
-        <Outlet/>  {/** outlet component from router-dom acccess then children compoemnet and replaces with the path that we call */}
-   </div>);
+   const AppLayout = () => {
+     const [userInfo, setUserInfo] = useState({});
+
+     useEffect(()=>{
+          //Authentication Api calls and set the userInfo.
+          const data={
+               name: 'Shriti B',
+               place: 'Dandeli',
+          }
+          setUserInfo(data);
+     },[]);
+console.log(userInfo)
+          return(
+          <Provider store={appStore}>
+          <UserContext.Provider value={{loggedInUser: userInfo.name , setUserInfo}}>
+          <div className='app'>
+               <Header/>
+               <Outlet/>  {/** outlet component from router-dom acccess then children compoemnet and replaces with the path that we call */}
+          </div>
+          </UserContext.Provider>
+          </Provider>
+          )
+  
+    };
    
    const appRouter = createBrowserRouter([{
           path:"/",
@@ -53,6 +77,10 @@
                {
                     path:"/contact",
                     element:<ContactUs/>
+               },
+               {
+                    path:"/cart",
+                    element:<Cart/>
                },
                {
                     path:"/instamart",
