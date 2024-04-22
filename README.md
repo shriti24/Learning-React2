@@ -69,3 +69,8 @@ unit
     Configure Babel 
     Configure parcel config file to disable default Babel tranpilation
     https://parceljs.org/languages/javascript/#babel - useage with other tools.
+    jest configuration - npm jest --init
+    Install jsdom library
+
+
+
