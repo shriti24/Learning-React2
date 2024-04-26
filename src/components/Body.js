@@ -33,9 +33,9 @@ const Body =()=>{
             <div className='flex'>
             <div className='search m-4 p-4'>
                 <div className='search'> 
-                    <input type='text' className='input-box border border-solid border-black' value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
+                    <input type='text' data-testid ="searchIp" className='input-box border border-solid border-black' value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
                      <button onClick={()=>{
-                            const filterList= restaurant_List.filter( res =>  res.info.name.includes(searchText));
+                            const filterList= restaurant_List.filter( res =>  res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                             setSearchList(filterList);
                         }
                     } className=" m-4 px-4 my-2 border-solid bg-green-500 rounded-lg" 
@@ -58,7 +58,7 @@ const Body =()=>{
                     res.info.aggregatedDiscountInfoV3 ? 
                     <Link to={'/restaurant/'+ res.info.id}><PromotedRestaurantCard resData={res.info} key={res.info.id} 
                         header={res.info.aggregatedDiscountInfoV3.header + res.info.aggregatedDiscountInfoV3.subHeader}/></Link> :
-                    <Link to={'/restaurant/'+ res.info.id}><RestaurantCard resData={res.info} key={res.info.id}/></Link> )
+                    <Link to={'/restaurant/'+ res.info.id}><RestaurantCard  resData={res.info} key={res.info.id}/></Link> )
                 }
             </div>
         </div>

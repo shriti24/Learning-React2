@@ -71,6 +71,11 @@ unit
     https://parceljs.org/languages/javascript/#babel - useage with other tools.
     jest configuration - npm jest --init
     Install jsdom library
+    Install @babel_preset-react to make JSX work in test cases.
+    Include @babel_preset-react inside my babel config
+    Install library @testing-library/jest-dom  for document command
+
+
 
 
 

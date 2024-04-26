@@ -1,0 +1,56 @@
+{
+    "id": "243755",
+    "name": "154 Breakfast Club",
+    "cloudinaryImageId": "ehywgny1yvqy65lvas24",
+    "locality": "Koramangala\t",
+    "areaName": "Koramangala",
+    "costForTwo": "₹1000 for two",
+    "cuisines": [
+        "American",
+        "Continental"
+    ],
+    "avgRating": 4.5,
+    "parentId": "22889",
+    "avgRatingString": "4.5",
+    "totalRatingsString": "1K+",
+    "sla": {
+        "deliveryTime": 28,
+        "lastMileTravel": 0.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "0.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2024-04-23 21:00:00",
+        "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "aggregatedDiscountInfoV2": {},
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+        }
+    },
+    "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+}

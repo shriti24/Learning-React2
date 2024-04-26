@@ -15,7 +15,6 @@ const [showItems, setShowItems] =useState(0);
 
   const handleClick =(index,event)=>{
     setShowItems(index);
-    console.log(index)
   }
 
 if(resInfo === null ) return <div></div>;
@@ -25,7 +24,6 @@ const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?
       c.card?.card?.["@type"] ===
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   );
-
   return (<div className='text-center'>
     <h1 className='font-bold my-10 text-lg'>{name}</h1>
     <h3 className='font-bold text-lg'>{avgRating} </h3>

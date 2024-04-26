@@ -12,7 +12,7 @@ const Cart = () => {
     }
 
   return (
-    <div className=' text-center font-bold m-4 p-4 '>
+    <div className=' text-center font-bold m-4 p-4 ' data-testid='food-item'>
     <h1 className='font-bold text-xl ' >Cart</h1>
         <h2><button onClick={handleClearCart}>Clear Cart</button></h2>
         <div className=' text-center w-[600px] m-auto'>

@@ -44,7 +44,6 @@
           }
           setUserInfo(data);
      },[]);
-console.log(userInfo)
           return(
           <Provider store={appStore}>
           <UserContext.Provider value={{loggedInUser: userInfo.name , setUserInfo}}>

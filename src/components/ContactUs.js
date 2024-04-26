@@ -1,8 +1,10 @@
 import React from 'react'
 
 const ContactUs = () => {
-  return (
+  return (<>
     <h1 className='font-bold text-center'>Contact Us</h1>
+    <button/>
+  </>
   )
 }
 
